@@ -1,7 +1,7 @@
 import client from '$lib/sanityClient.js';
 
 export async function load({ params }) {
-	const posts = await client.fetch(`*[_type == "post"][0]`);
+	const posts = await client.fetch(`*[_type == "post"]`);
 
 	if (posts) {
 		return {
